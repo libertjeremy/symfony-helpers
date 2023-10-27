@@ -1,0 +1,19 @@
+{
+    "name": "libertjeremy/symfony-helpers",
+    "type": "library",
+    "authors": [
+        {
+            "name": "libertjeremy",
+            "email": "contact@libertjeremy.fr"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "symfony/service-contracts": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "LibertJeremy\\Symfony\\Helpers\\": "src/"
+        }
+    }
+}
