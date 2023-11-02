@@ -14,7 +14,7 @@ trait TranslatorAwareTrait
     protected ?TranslatorInterface $translator = null;
 
     #[Required]
-    public function setTranslator(TranslatorInterface $translator): void
+    public function setTranslator(?TranslatorInterface $translator): void
     {
         $this->translator = $translator;
     }
