@@ -7,7 +7,7 @@ use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInt
 use Symfony\Contracts\Service\Attribute\Required;
 
 /**
- * @see TokenStorageAwareInterface::class
+ * @see TokenStorageAwareInterface
  */
 trait TokenStorageAwareTrait
 {
