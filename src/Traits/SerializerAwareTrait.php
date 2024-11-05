@@ -2,6 +2,7 @@
 
 namespace LibertJeremy\Symfony\Helpers\Traits;
 
+use LibertJeremy\Symfony\Helpers\Interfaces\SerializerAwareInterface;
 use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Contracts\Service\Attribute\Required;
 
