@@ -13,6 +13,9 @@ use Symfony\Contracts\Service\Attribute\Required;
  */
 trait RouterAwareTrait
 {
+    /**
+     * @see UrlGeneratorAwareTrait for better performance.
+     */
     protected ?RouterInterface $router;
 
     #[Required]
