@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace LibertJeremy\Symfony\Helpers\Traits;
 
 use LibertJeremy\Symfony\Helpers\Interfaces\FormFactoryAwareInterface;
