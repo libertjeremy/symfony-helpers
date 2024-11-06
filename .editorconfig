@@ -8,11 +8,5 @@ charset = utf-8
 trim_trailing_whitespace = true
 indent_style = space
 
-[*.{json,yml}]
-indent_size = 4
-
-[*.html.twig]
-insert_final_newline = false
-
 [*.md]
 trim_trailing_whitespace = false
