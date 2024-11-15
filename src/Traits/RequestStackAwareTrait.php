@@ -16,7 +16,7 @@ trait RequestStackAwareTrait
     protected ?RequestStack $requestStack = null;
 
     #[Required]
-    public function setRequestStack(?RequestStack $requestStack): void
+    public function setRequestStack(RequestStack $requestStack): void
     {
         $this->requestStack = $requestStack;
     }

@@ -16,7 +16,7 @@ trait AuthorizationCheckerAwareTrait
     protected ?AuthorizationCheckerInterface $authorizationChecker = null;
 
     #[Required]
-    public function setAuthorizationChecker(?AuthorizationCheckerInterface $authorizationChecker): void
+    public function setAuthorizationChecker(AuthorizationCheckerInterface $authorizationChecker): void
     {
         $this->authorizationChecker = $authorizationChecker;
     }

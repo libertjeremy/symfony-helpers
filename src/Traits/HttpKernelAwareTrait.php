@@ -16,7 +16,7 @@ trait HttpKernelAwareTrait
     protected ?HttpKernelInterface $httpKernel = null;
 
     #[Required]
-    public function setHttpKernel(?HttpKernelInterface $httpKernel): void
+    public function setHttpKernel(HttpKernelInterface $httpKernel): void
     {
         $this->httpKernel = $httpKernel;
     }

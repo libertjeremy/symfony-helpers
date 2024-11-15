@@ -13,10 +13,10 @@ use Symfony\Contracts\Service\Attribute\Required;
  */
 trait ParameterBagAwareTrait
 {
-    protected ?ParameterBagInterface $parameterBag;
+    protected ?ParameterBagInterface $parameterBag = null;
 
     #[Required]
-    public function setParameterBag(?ParameterBagInterface $parameterBag): void
+    public function setParameterBag(ParameterBagInterface $parameterBag): void
     {
         $this->parameterBag = $parameterBag;
     }

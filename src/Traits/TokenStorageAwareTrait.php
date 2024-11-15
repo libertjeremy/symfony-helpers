@@ -16,7 +16,7 @@ trait TokenStorageAwareTrait
     protected ?TokenStorageInterface $tokenStorage = null;
 
     #[Required]
-    public function setTokenStorage(?TokenStorageInterface $tokenStorage): void
+    public function setTokenStorage(TokenStorageInterface $tokenStorage): void
     {
         $this->tokenStorage = $tokenStorage;
     }

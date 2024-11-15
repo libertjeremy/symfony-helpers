@@ -13,10 +13,10 @@ use Symfony\Contracts\Service\Attribute\Required;
  */
 trait UrlGeneratorAwareTrait
 {
-    protected ?UrlGeneratorInterface $urlGenerator;
+    protected ?UrlGeneratorInterface $urlGenerator = null;
 
     #[Required]
-    public function setUrlGenerator(?UrlGeneratorInterface $urlGenerator): void
+    public function setUrlGenerator(UrlGeneratorInterface $urlGenerator): void
     {
         $this->urlGenerator = $urlGenerator;
     }

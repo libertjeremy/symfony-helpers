@@ -16,7 +16,7 @@ trait FormFactoryAwareTrait
     protected ?FormFactoryInterface $formFactory = null;
 
     #[Required]
-    public function setFormFactory(?FormFactoryInterface $formFactory): void
+    public function setFormFactory(FormFactoryInterface $formFactory): void
     {
         $this->formFactory = $formFactory;
     }

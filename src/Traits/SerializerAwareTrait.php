@@ -13,10 +13,10 @@ use Symfony\Contracts\Service\Attribute\Required;
  */
 trait SerializerAwareTrait
 {
-    protected ?SerializerInterface $serializer;
+    protected ?SerializerInterface $serializer = null;
 
     #[Required]
-    public function setSerializer(?SerializerInterface $serializer): void
+    public function setSerializer(SerializerInterface $serializer): void
     {
         $this->serializer = $serializer;
     }

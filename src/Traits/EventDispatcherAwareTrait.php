@@ -16,7 +16,7 @@ trait EventDispatcherAwareTrait
     protected ?EventDispatcherInterface $eventDispatcher = null;
 
     #[Required]
-    public function setEventDispatcher(?EventDispatcherInterface $eventDispatcher): void
+    public function setEventDispatcher(EventDispatcherInterface $eventDispatcher): void
     {
         $this->eventDispatcher = $eventDispatcher;
     }

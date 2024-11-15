@@ -16,7 +16,7 @@ trait TwigAwareTrait
     protected ?Environment $twig = null;
 
     #[Required]
-    public function setTwig(?Environment $twig): void
+    public function setTwig(Environment $twig): void
     {
         $this->twig = $twig;
     }

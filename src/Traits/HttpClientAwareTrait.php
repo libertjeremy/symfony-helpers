@@ -13,10 +13,10 @@ use Symfony\Contracts\Service\Attribute\Required;
  */
 trait HttpClientAwareTrait
 {
-    protected ?HttpClientInterface $httpClient;
+    protected ?HttpClientInterface $httpClient = null;
 
     #[Required]
-    public function setHttpClient(?HttpClientInterface $httpClient): void
+    public function setHttpClient(HttpClientInterface $httpClient): void
     {
         $this->httpClient = $httpClient;
     }
