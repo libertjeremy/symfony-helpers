@@ -16,7 +16,7 @@ trait HttpClientAwareTrait
     protected ?HttpClientInterface $httpClient = null;
 
     #[Required]
-    public function setHttpClient(HttpClientInterface $httpClient): void
+    public function setHttpClient(?HttpClientInterface $httpClient): void
     {
         $this->httpClient = $httpClient;
     }
