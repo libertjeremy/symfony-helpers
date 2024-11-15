@@ -10,5 +10,5 @@ use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
  */
 interface ParameterBagAwareInterface
 {
-    public function setParameterBag(?ParameterBagInterface $parameterBag): void;
+    public function setParameterBag(ParameterBagInterface $parameterBag): void;
 }

@@ -10,5 +10,5 @@ use Symfony\Contracts\EventDispatcher\EventDispatcherInterface;
  */
 interface EventDispatcherAwareInterface
 {
-    public function setEventDispatcher(?EventDispatcherInterface $eventDispatcher): void;
+    public function setEventDispatcher(EventDispatcherInterface $eventDispatcher): void;
 }

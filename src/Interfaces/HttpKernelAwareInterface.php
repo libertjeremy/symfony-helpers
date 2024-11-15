@@ -10,5 +10,5 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
  */
 interface HttpKernelAwareInterface
 {
-    public function setHttpKernel(?HttpKernelInterface $httpKernel): void;
+    public function setHttpKernel(HttpKernelInterface $httpKernel): void;
 }

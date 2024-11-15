@@ -10,5 +10,5 @@ use Symfony\Component\Serializer\SerializerInterface;
  */
 interface SerializerAwareInterface
 {
-    public function setSerializer(?SerializerInterface $serializer): void;
+    public function setSerializer(SerializerInterface $serializer): void;
 }

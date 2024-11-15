@@ -10,5 +10,5 @@ use Symfony\Component\Routing\RouterInterface;
  */
 interface RouterAwareInterface
 {
-    public function setRouter(?RouterInterface $router): void;
+    public function setRouter(RouterInterface $router): void;
 }

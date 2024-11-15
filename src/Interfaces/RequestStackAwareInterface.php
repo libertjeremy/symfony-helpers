@@ -10,5 +10,5 @@ use Symfony\Component\HttpFoundation\RequestStack;
  */
 interface RequestStackAwareInterface
 {
-    public function setRequestStack(?RequestStack $requestStack): void;
+    public function setRequestStack(RequestStack $requestStack): void;
 }

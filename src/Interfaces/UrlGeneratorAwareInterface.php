@@ -10,5 +10,5 @@ use Symfony\Component\Routing\UrlGeneratorInterface;
  */
 interface UrlGeneratorAwareInterface
 {
-    public function setUrlGenerator(?UrlGeneratorInterface $urlGenerator): void;
+    public function setUrlGenerator(UrlGeneratorInterface $urlGenerator): void;
 }

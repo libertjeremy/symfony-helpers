@@ -10,5 +10,5 @@ use Symfony\Component\Form\FormFactoryInterface;
  */
 interface FormFactoryAwareInterface
 {
-    public function setFormFactory(?FormFactoryInterface $formFactory): void;
+    public function setFormFactory(FormFactoryInterface $formFactory): void;
 }

@@ -10,5 +10,5 @@ use Twig\Environment;
  */
 interface TwigAwareInterface
 {
-    public function setTwig(?Environment $twig): void;
+    public function setTwig(Environment $twig): void;
 }
