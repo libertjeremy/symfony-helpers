@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace LibertJeremy\Symfony\Helpers\Tests;
 
 use LibertJeremy\Symfony\Helpers\Traits\UrlGeneratorAwareTrait;
+use Psr\Container\ContainerInterface;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\BrowserKit\AbstractBrowser;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
@@ -17,10 +18,22 @@ class AbstractControllerTestCase extends WebTestCase
 
     protected function setUp(): void
     {
+        if (true === $this->skipSetUpBeforeShutdown()) {
+            self::markTestSkipped();
+
+            return;
+        }
+
         self::ensureKernelShutdown();
 
         $this->initializeClient();
         $this->initializeContainer();
+
+        if (true === $this->skipSetUpAfterInitializeClientAndContainer(self::getContainer())) {
+            self::markTestSkipped();
+
+            return;
+        }
 
         if (method_exists($this, 'initialize')) {
             $this->initialize(self::getContainer());
@@ -58,5 +71,15 @@ class AbstractControllerTestCase extends WebTestCase
             $this->entityManager->close();
             $this->entityManager = null;
         }
+    }
+
+    protected function skipSetUpBeforeShutdown(): bool
+    {
+        return false;
+    }
+
+    protected function skipSetUpAfterInitializeClientAndContainer(ContainerInterface $container): bool
+    {
+        return false;
     }
 }
