@@ -4,6 +4,7 @@ namespace LibertJeremy\Symfony\Helpers\Controller\Traits;
 
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\HttpKernel\Exception\UnprocessableEntityHttpException;
 
 trait ExceptionTrait
 {
@@ -15,5 +16,10 @@ trait ExceptionTrait
     protected function createAccessDeniedException(string $message = 'Access Denied.', \Throwable $previous = null): AccessDeniedHttpException
     {
         return new AccessDeniedHttpException($message, $previous);
+    }
+
+    protected function createUnprocessableEntityException(string $message = 'Unavailable Entity.', \Throwable $previous = null): UnprocessableEntityHttpException
+    {
+        return new UnprocessableEntityHttpException($message, $previous);
     }
 }
