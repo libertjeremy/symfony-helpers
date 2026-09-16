@@ -8,17 +8,17 @@ use Symfony\Component\HttpKernel\Exception\UnprocessableEntityHttpException;
 
 trait ExceptionTrait
 {
-    protected function createNotFoundException(string $message = 'Not Found', \Throwable $previous = null): NotFoundHttpException
+    protected function createNotFoundException(string $message = 'Not Found', ?\Throwable $previous = null): NotFoundHttpException
     {
         return new NotFoundHttpException($message, $previous);
     }
 
-    protected function createAccessDeniedException(string $message = 'Access Denied.', \Throwable $previous = null): AccessDeniedHttpException
+    protected function createAccessDeniedException(string $message = 'Access Denied.', ?\Throwable $previous = null): AccessDeniedHttpException
     {
         return new AccessDeniedHttpException($message, $previous);
     }
 
-    protected function createUnprocessableEntityException(string $message = 'Unavailable Entity.', \Throwable $previous = null): UnprocessableEntityHttpException
+    protected function createUnprocessableEntityException(string $message = 'Unavailable Entity.', ?\Throwable $previous = null): UnprocessableEntityHttpException
     {
         return new UnprocessableEntityHttpException($message, $previous);
     }
