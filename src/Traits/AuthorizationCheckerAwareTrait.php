@@ -13,7 +13,7 @@ use Symfony\Contracts\Service\Attribute\Required;
  */
 trait AuthorizationCheckerAwareTrait
 {
-    protected ?AuthorizationCheckerInterface $authorizationChecker = null;
+    protected AuthorizationCheckerInterface $authorizationChecker;
 
     #[Required]
     public function setAuthorizationChecker(AuthorizationCheckerInterface $authorizationChecker): void
