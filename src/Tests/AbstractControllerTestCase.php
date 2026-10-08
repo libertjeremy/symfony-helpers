@@ -56,7 +56,7 @@ class AbstractControllerTestCase extends WebTestCase
         $this->initContainer(self::getContainer());
 
         if (!$this->urlGenerator instanceof UrlGeneratorInterface) {
-            $this->initDependencyInjectionIfNotExists(UrlGeneratorInterface::class, $this->urlGenerator, $this->container);
+            $this->urlGenerator ??= $this->container->get(UrlGeneratorInterface::class);
         }
     }
 
