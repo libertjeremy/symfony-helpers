@@ -38,12 +38,10 @@ class AbstractKernelTestCase extends KernelTestCase
     {
         parent::tearDown();
 
-        if (
-            isset($this->entityManager)
-            && null !== $this->entityManager
-        ) {
+        // unset() et non `= null` : la propriété peut être typée non nullable (EntityManagerAwareTrait).
+        if (isset($this->entityManager)) {
             $this->entityManager->close();
-            $this->entityManager = null;
+            unset($this->entityManager);
         }
     }
 
