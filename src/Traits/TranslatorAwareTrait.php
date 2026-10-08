@@ -13,7 +13,7 @@ use Symfony\Contracts\Translation\TranslatorInterface;
  */
 trait TranslatorAwareTrait
 {
-    protected ?TranslatorInterface $translator = null;
+    protected TranslatorInterface $translator;
 
     #[Required]
     public function setTranslator(TranslatorInterface $translator): void
