@@ -13,7 +13,7 @@ use Symfony\Contracts\Service\Attribute\Required;
  */
 trait LoggerAwareTrait
 {
-    protected ?LoggerInterface $logger = null;
+    protected LoggerInterface $logger;
 
     #[Required]
     public function setLogger(LoggerInterface $logger): void
