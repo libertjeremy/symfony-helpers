@@ -55,9 +55,9 @@ class AbstractControllerTestCase extends WebTestCase
     {
         $this->initContainer(self::getContainer());
 
-        if (!$this->urlGenerator instanceof UrlGeneratorInterface) {
-            $this->urlGenerator ??= $this->container->get(UrlGeneratorInterface::class);
-        }
+        // ??= et non instanceof : la propriété est typée non nullable (UrlGeneratorAwareTrait) et peut
+        // ne pas être encore initialisée ; ?? est le seul accès qui le tolère.
+        $this->urlGenerator ??= $this->container->get(UrlGeneratorInterface::class);
     }
 
     protected function tearDown(): void
