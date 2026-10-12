@@ -13,7 +13,7 @@ use Symfony\Contracts\Service\Attribute\Required;
  */
 trait UrlGeneratorAwareTrait
 {
-    protected ?UrlGeneratorInterface $urlGenerator = null;
+    protected UrlGeneratorInterface $urlGenerator;
 
     #[Required]
     public function setUrlGenerator(UrlGeneratorInterface $urlGenerator): void

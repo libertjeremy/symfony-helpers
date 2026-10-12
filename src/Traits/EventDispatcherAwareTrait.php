@@ -13,7 +13,7 @@ use Symfony\Contracts\Service\Attribute\Required;
  */
 trait EventDispatcherAwareTrait
 {
-    protected ?EventDispatcherInterface $eventDispatcher = null;
+    protected EventDispatcherInterface $eventDispatcher;
 
     #[Required]
     public function setEventDispatcher(EventDispatcherInterface $eventDispatcher): void
