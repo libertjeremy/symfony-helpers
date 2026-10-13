@@ -13,7 +13,7 @@ use Twig\Environment;
  */
 trait TwigAwareTrait
 {
-    protected ?Environment $twig = null;
+    protected Environment $twig;
 
     #[Required]
     public function setTwig(Environment $twig): void

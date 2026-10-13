@@ -6,7 +6,6 @@ use LibertJeremy\Symfony\Helpers\Controller\Interfaces\ControllerWithTwigInterfa
 use LibertJeremy\Symfony\Helpers\Traits\TwigAwareTrait;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\Response;
-use Twig\Environment;
 
 /**
  * @see ControllerWithTwigInterface
@@ -22,10 +21,6 @@ trait TwigTrait
      */
     protected function renderView(string $view, array $parameters = []): string
     {
-        if (!$this->twig instanceof Environment) {
-            throw new \LogicException('You cannot use the "renderView" method if the Twig Bundle is not available. Try running "composer require symfony/twig-bundle".');
-        }
-
         foreach ($parameters as $k => $v) {
             if ($v instanceof FormInterface) {
                 $parameters[$k] = $v->createView();
