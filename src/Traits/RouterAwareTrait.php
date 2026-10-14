@@ -16,7 +16,7 @@ trait RouterAwareTrait
     /**
      * @see UrlGeneratorAwareTrait for better performance.
      */
-    protected ?RouterInterface $router = null;
+    protected RouterInterface $router;
 
     #[Required]
     public function setRouter(RouterInterface $router): void
