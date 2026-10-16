@@ -13,7 +13,7 @@ use Symfony\Contracts\Service\Attribute\Required;
  */
 trait FormFactoryAwareTrait
 {
-    protected ?FormFactoryInterface $formFactory = null;
+    protected readonly FormFactoryInterface $formFactory;
 
     #[Required]
     public function setFormFactory(FormFactoryInterface $formFactory): void
