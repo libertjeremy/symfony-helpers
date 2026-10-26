@@ -13,7 +13,7 @@ use Symfony\Contracts\Service\Attribute\Required;
  */
 trait TokenStorageAwareTrait
 {
-    protected ?TokenStorageInterface $tokenStorage = null;
+    protected readonly TokenStorageInterface $tokenStorage;
 
     #[Required]
     public function setTokenStorage(TokenStorageInterface $tokenStorage): void

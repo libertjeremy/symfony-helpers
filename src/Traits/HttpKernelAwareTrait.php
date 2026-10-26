@@ -13,7 +13,7 @@ use Symfony\Contracts\Service\Attribute\Required;
  */
 trait HttpKernelAwareTrait
 {
-    protected ?HttpKernelInterface $httpKernel = null;
+    protected readonly HttpKernelInterface $httpKernel;
 
     #[Required]
     public function setHttpKernel(HttpKernelInterface $httpKernel): void

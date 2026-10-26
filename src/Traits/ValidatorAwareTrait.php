@@ -13,7 +13,7 @@ use Symfony\Contracts\Service\Attribute\Required;
  */
 trait ValidatorAwareTrait
 {
-    protected ?ValidatorInterface $validator = null;
+    protected readonly ValidatorInterface $validator;
 
     #[Required]
     public function setValidator(ValidatorInterface $validator): void

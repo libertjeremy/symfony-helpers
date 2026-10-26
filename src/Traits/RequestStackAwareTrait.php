@@ -13,7 +13,7 @@ use Symfony\Contracts\Service\Attribute\Required;
  */
 trait RequestStackAwareTrait
 {
-    protected ?RequestStack $requestStack = null;
+    protected readonly RequestStack $requestStack;
 
     #[Required]
     public function setRequestStack(RequestStack $requestStack): void
